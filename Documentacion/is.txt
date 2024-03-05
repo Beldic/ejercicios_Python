@@ -1,0 +1,34 @@
+# OPERDOR 'IS' #
+
+EN Python, 'is' es un operador que se utiliza para probar si dos variables se refieren
+al mismo objeto en memoria, es decir, si tienen la misma identidad. No compara los
+valores de variables, sino sus identidades, lo que puede difererir de la igualdad en
+términos de contenido. 
+
+Por ejemplo, considera dos listas que contienen los mismos elementos. Aunque estas listas
+se ven iguales en terminos de su contenido, son objetos DISTINTOS ubicados en 
+DIFERENTES ubicaciones de la memoria. Usar 'is' para comparar estas listas devolvería
+'False' porque, aunque su contenido es el mismo, no son el mismo OBJETO EN MEMORIA. 
+
+lista_a = [1, 2, 3]
+lista_b = [1, 2, 3]
+resultado = lista_a is lista_b  # Esto será False, porque son objetos distintos en memoria.
+
+En contraste, si asignas una variable a otra, ambas variables apuntarán al mismo objeto
+en memoria, por lo que el operador 'is' devolvería 'True'.
+
+lista_a = [1, 2, 3]
+lista_b = lista_a
+resultado = lista_a is lista_b  # Esto será True, ya que ambas variables apuntan al mismo objeto en memoria.
+
+El operador 'is' es particularmente útil para verificar si una variable es 'None', ya que
+'None' es un singleton en Python(existe una única instancia del 'None' en cualquier programa
+de Python).
+
+variable = None
+if variable is None:
+    print("La variable es None.")
+
+
+Esta precisión es crucial, especialmente en contextos donde la diferencia entre igualdad
+de valor ('==') y identidad ('is') puede afectar el flujo o la lógica del programa. 
