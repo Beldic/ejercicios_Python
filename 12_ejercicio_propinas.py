@@ -30,4 +30,4 @@ porcentaje = float(input("\nIntroduce el porcentaje de propina que deseas dejar:
 
 propina = factura * ( porcentaje / 100 )
 
-print(f"\n La factura es: {factura:.2f} \n El porcentaje de propina es: {porcentaje:.2f} \n La propina es: {propina:.2f} \n y el monto final es: {(factura + propina):.2f}\n")
+print(f"\n La factura es: {factura:.2f} \n El porcentaje de propina es:{porcentaje:.2f} \n La propina es: {propina:.2f} \n y el monto final es: {(factura + propina):.2f}\n")
