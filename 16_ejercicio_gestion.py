@@ -19,7 +19,7 @@ para realizar las siguientes acciones:
 
 
 
-print("\n Bienvenido al Sistema de Gestión del Sistema \n")
+print("\n Bienvenido al Sistema de Gestión de Usuarios \n")
 
 
 user_1 = str(input(" nombre del primer usuario: "))
