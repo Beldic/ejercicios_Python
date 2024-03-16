@@ -35,15 +35,15 @@ con_estrategia = set()
 con_deportes = set()
 
 
-lis_aventura = (str(input("\nIntroduce los títulos de aventuras separados por coma(,): ")).upper())
-lis_accion = (str(input("Introduce los títulos de acción separados por coma(,): ")).upper())
-lis_estrategia = (str(input("Introduce los títulos de estrategia sepadados por coma(,): ")).upper())
-lis_deportes = (str(input("Introduce los títulos de deportes separados por coma(,): ")).upper())
+cad_aventura = str(input("\nIntroduce los títulos de aventuras separados por coma(,): ").upper()).split(',')
+cad_accion = str(input("Introduce los títulos de acción separados por coma(,): ")).upper()
+cad_estrategia = str(input("Introduce los títulos de estrategia sepadados por coma(,): ")).upper()
+cad_deportes = str(input("Introduce los títulos de deportes separados por coma(,): ")).upper()
 
-con_aventura.update(lis_aventura.split(","))
-con_accion.update(lis_accion.split(","))
-con_estrategia.update(lis_estrategia.split(","))
-con_deportes.update(lis_deportes.split(","))
+con_aventura.update(cad_aventura)
+con_accion.update(cad_accion.split(","))
+con_estrategia.update(cad_estrategia.split(","))
+con_deportes.update(cad_deportes.split(","))
 
 print("\n - RESUMEN DEL CATÁLOGO DE VIDEOJUEGOS -")
 
@@ -54,14 +54,14 @@ print(f"\n {len(con_deportes)} Títulos de DEPORTES: {con_deportes}\n")
 
 # OPERACIONES CON CONJUNTOS
 
-print(f"\n Titulos presentes en Aventura y Acción: {con_aventura.union(con_accion)}")
+print(f"\n Titulos presentes en Aventura y Acción: {con_aventura.intersection(con_accion)}")
 print(f"\n Titulos presentes en Estrategia pero no en la de deportes: {con_estrategia.difference(con_deportes)}")
 
 con_todos = set()
 
 print(f"\n Todos los juegos en tu BIBLIOTECA DE JUEGOS: { con_todos.union(con_aventura,con_accion,con_estrategia,con_deportes)}")
 
-
+print(con_todos)
         
 
 
