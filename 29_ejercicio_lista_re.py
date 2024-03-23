@@ -45,7 +45,7 @@ conjunto_a.remove(cancion_eliminada)
 
 print(f"Canción eliminada: {cancion_eliminada}\n")
 
-conjunto_ab_union = conjunto_a.union(conjunto_b) # Unión de 
+conjunto_ab_union = conjunto_a.union(conjunto_b) # Unión de conjuntos
 
 print("\nUnión de A y B: ", conjunto_ab_union)
 
